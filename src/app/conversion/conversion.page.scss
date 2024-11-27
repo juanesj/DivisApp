@@ -1,0 +1,27 @@
+.resultado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #3880ff;
+  }
+  
+  .ciudad {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .ciudad img {
+    width: 40px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  .ciudad p {
+    margin: 0;
+    font-size: 14px;
+  }
+  

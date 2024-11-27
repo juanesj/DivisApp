@@ -1,16 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>DivisApp 23000485</ion-title>
+    <ion-title>Conversión de Divisas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
   <ion-item>
-    <ion-label position="floating">Ingrese la cantidad en Quetzales</ion-label>
+    <ion-label position="floating">Cantidad en Quetzales</ion-label>
     <ion-input [(ngModel)]="quetzales" type="number"></ion-input>
   </ion-item>
-  <ion-button expand="full" (click)="convertir()">Convertir a Dólares</ion-button>
-  <div *ngIf="resultado !== null">
+
+  <ion-button expand="block" (click)="convertir()">Convertir</ion-button>
+
+  <div *ngIf="resultado !== null" class="resultado">
     <h2>Equivalente en dólares: {{ resultado | number: '1.2-2' }}</h2>
+  </div>
+
+  <div *ngIf="ciudades.length > 0">
+    <h3>Ciudades más bellas del mundo:</h3>
+    <div class="ciudad" *ngFor="let ciudad of ciudades">
+      <img [src]="ciudad.bandera" alt="Bandera" />
+      <p><strong>{{ ciudad.nombre }}</strong> - {{ ciudad.capital }}</p>
+    </div>
   </div>
 </ion-content>
